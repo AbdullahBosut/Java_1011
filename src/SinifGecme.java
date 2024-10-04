@@ -45,6 +45,7 @@ public class SinifGecme {
            System.out.println("Sınıfta Kaldınız.");
        }
         System.out.println("Not Ortalamanız:"+ortalama);
+        System.out.println("Geçerli Ders Sayısı:" + sayi);
 
 
     }
