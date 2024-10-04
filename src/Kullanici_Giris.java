@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Kullanici_Giris {
     public static void main(String[] args) {
-        String UserName,Password,PassReset = "",NewPassword = "";
+        String UserName,Password,PassReset = "sıfır",NewPassword = "";
         Scanner scn = new Scanner(System.in);
         System.out.print("Kullaıcı Adınızı Giriniz: ");
         UserName = scn.nextLine();
@@ -27,7 +27,7 @@ public class Kullanici_Giris {
             }else {
                 System.out.println("Şifre Oluşturulamadı,lütfen Başka Şifre Giriniz.");
             }
-        }else {
+        }else if (!PassReset.equals("sıfır")){
             System.out.println("Giriş Yapılamadı!");
         }
 
