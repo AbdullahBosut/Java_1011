@@ -21,7 +21,7 @@ public class Loop_Ortalama_Hesaplama {
         System.out.println();
         System.out.println("Toplam: "+toplam);
         System.out.println("Bölen: " + bol);
-        System.out.println("Ortalama: " + toplam/bol);
+        System.out.println("Ortalama: " + (toplam/bol));
 
 
     }
