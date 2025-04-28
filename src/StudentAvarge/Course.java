@@ -1,3 +1,5 @@
+package StudentAvarge;
+
 public class Course {
     Teacher teacher;
     String name;

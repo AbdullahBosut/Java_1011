@@ -1,3 +1,5 @@
+package StudentAvarge;
+
 public class Manage_Student {
     public static void main(String[] args) {
         Teacher clasteacher = new Teacher("Grhambell","0000","KMY");

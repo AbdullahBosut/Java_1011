@@ -1,3 +1,5 @@
+package StudentAvarge;
+
 public class Student {
     Course c1;
     Course c2;
@@ -8,7 +10,7 @@ public class Student {
     double avarge;
     boolean ispass;
 
-    Student(String name,String Stuno,String classes,Course c1,Course c2,Course c3){
+    Student(String name, String Stuno, String classes, Course c1, Course c2, Course c3){
         this.name = name;
         this.Stuno = Stuno;
         this.classes = classes;
@@ -41,7 +43,7 @@ public class Student {
 
     }
     void isPass(){
-        this.avarge = ( (this.c1.note) + (this.c2.note) + (this.c3.note) / 3.0 );
+        this.avarge = ( this.c1.note + this.c2.note + this.c3.note / 3.0 );
         if (this.avarge >= 50){
             System.out.println("Sınıfı Geçtiniz!!!");
         }else {
