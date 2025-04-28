@@ -1,5 +1,7 @@
 package Ring;
 
+import java.util.Random;
+
 public class Match {
     Fighter f1;
     Fighter f2;
@@ -15,13 +17,43 @@ public class Match {
     }
     void run(){
         if (isCheck()){
-                while (this.f1.health >0 && this.f2.health > 0){
+                /*while (this.f1.health >0 && this.f2.health > 0){
                     System.out.println("==== "+rouncounter+"." +"ROUND ====");
                     rouncounter++;
-                    this.f2.health = this.f1.hit(this.f2);
+                    this.f2.health = this.f1.hit(this.f2); ////
                     if (isWin())
                         break;
-                    this.f1.health = this.f2.hit(this.f1);
+                    this.f1.health = this.f2.hit(this.f1); ////
+                    if (isWin())
+                        break;
+                    System.out.println(this.f1.name + " Sağlık : " + this.f1.health);
+                    System.out.println(this.f2.name + " Sağlık : " + this.f2.health);
+                }
+
+                 */
+            Random random = new Random();
+            if (random.nextBoolean()) {
+                while (this.f1.health > 0 && this.f2.health > 0) {
+                    System.out.println("==== " + rouncounter + "." + "ROUND ====");
+                    rouncounter++;
+                    System.out.println("%50");
+                    this.f1.health = this.f2.hit(this.f1);////
+                    if (isWin())
+                        break;
+                    this.f2.health = this.f1.hit(this.f2);////
+                    if (isWin())
+                        break;
+                    System.out.println(this.f1.name + " Sağlık : " + this.f1.health);
+                    System.out.println(this.f2.name + " Sağlık : " + this.f2.health);
+                }
+            } else {
+                while (this.f1.health > 0 && this.f2.health > 0) {
+                    System.out.println("==== " + rouncounter + "." + "ROUND ====");
+                    rouncounter++;
+                    this.f2.health = this.f1.hit(this.f2); ////
+                    if (isWin())
+                        break;
+                    this.f1.health = this.f2.hit(this.f1); ////
                     if (isWin())
                         break;
                     System.out.println(this.f1.name + " Sağlık : " + this.f1.health);
@@ -29,6 +61,7 @@ public class Match {
                 }
 
 
+            }
         }else {
             System.out.println("Sporcuların Sikletleri Birbirine Uymuyor!!!");
         }
@@ -47,6 +80,5 @@ public class Match {
         }
         return false;
     }
-
 
 }
